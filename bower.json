@@ -1,0 +1,26 @@
+{
+  "name": "thd-angular-t02",
+  "description": "\"Testing Angular.js\"",
+  "main": "public/index.html",
+  "authors": [
+    "Matthew Ledbetter"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mledbet37/thd-angular-t02",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "https://github.com/angular/bower-angular.git#~1.4.8",
+    "bootstrap": "https://github.com/twbs/bootstrap.git#~3.3.6",
+    "jquery": "https://github.com/jquery/jquery.git#~2.1.4",
+    "lodash": "https://github.com/lodash/lodash.git#~3.10.1",
+    "font-awesome": "https://github.com/FortAwesome/Font-Awesome.git#~4.5.0"
+  }
+}
