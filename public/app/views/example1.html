@@ -1,0 +1,6 @@
+<div class="container alert alert-info" ng-controller="BaseController as base">Parent Div
+    <span>{{base.sayName()}}</span>
+    <div class="alert alert-warning" ng-controller="ChildController as child">Child Div
+        <span>{{child.sayName()}}</span>
+    </div>
+</div>
