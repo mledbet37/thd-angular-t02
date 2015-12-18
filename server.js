@@ -62,6 +62,7 @@ app.use(function (err, req, res, next) {
 
 // Faker data generator:
 // generate some fake users.
+<<<<<<< HEAD
 generateUserData = function (users) {
     var fakeName,
         finance,
@@ -106,6 +107,57 @@ generateUserData = function (users) {
     obj.data = users;
     return obj;
 };
+
+isSalaried = function() {
+    return (Math.random()<.5);
+}
+isTerminated = function() {
+    return (Math.random()<.5);
+}
+ generateUserData = function (users) {
+     var fakeName,
+         finance,
+         address,
+         date,
+         phone,
+         internet,
+         image,
+         tmp = {},
+         obj = {'data': []};
+     users = Object.prototype.toString.call(users) === '[object Array]' ? users : [];
+     for (i = 0; i < 20; i++) {
+         fakeName = faker.name;
+         finance = faker.finance;
+         address = faker.address;
+         date = faker.date;
+         phone = faker.phone;
+         internet = faker.internet;
+         image = faker.image;
+         var state = address.state();
+         tmp = {
+             'firstName': fakeName.firstName(),
+             'lastName': fakeName.lastName(),
+             'job': fakeName.jobTitle(),
+             'prefix': fakeName.prefix(),
+             'employeeId': isSalaried() ? 'se_' + finance.account() : 'hn_' + finance.account(),
+             'startDate': date.past(5),
+             'endDate': isTerminated() ? date.between(date.recent(), date.past()) : null,
+             'contact': {
+                 'cell': phone.phoneNumber().replace(/[\(\)-.\s]*/g, "").replace(/(x)([\d]{0,5})/, "").substring(0, 10).replace(/^0/, (Math.floor(Math.random() * 9) + 1).toString()),
+                 'home': phone.phoneNumber().replace(/[\(\)-.\s]*/g, "").replace(/(x)([\d]{0,5})/, "").substring(0, 10).replace(/^0/, (Math.floor(Math.random() * 9) + 1).toString()),
+                 'address' : address.streetAddress(),
+                 'stateAbbr' : address.stateAbbr(state),
+                 'zip' : address.zipCode()
+             },
+             'avatar': internet.avatar(),
+             //'image' : image.image(),
+             //'imageUrl': image.imageUrl()
+         };
+         users.push(tmp);
+     }
+     obj.data = users;
+     return obj;
+ };
 
 isSalaried = function() {
     return (Math.random()<.5);

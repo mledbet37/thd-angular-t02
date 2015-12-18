@@ -21,6 +21,8 @@
     "bootstrap": "https://github.com/twbs/bootstrap.git#~3.3.6",
     "jquery": "https://github.com/jquery/jquery.git#~2.1.4",
     "lodash": "https://github.com/lodash/lodash.git#~3.10.1",
-    "font-awesome": "https://github.com/FortAwesome/Font-Awesome.git#~4.5.0"
+    "font-awesome": "https://github.com/FortAwesome/Font-Awesome.git#~4.5.0",
+    "moment": "~2.10.6",
+    "angular-route": "https://github.com/angular/bower-angular-route.git#~1.4.8"
   }
 }
