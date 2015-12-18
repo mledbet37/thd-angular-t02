@@ -11,7 +11,7 @@
 
             $routeProvider
                 .when('/', {
-                    //templateUrl: 'app/views/example1.html'
+                    templateUrl: 'app/views/example1.html'
                 });
         }
     ]);
