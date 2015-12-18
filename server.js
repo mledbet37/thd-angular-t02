@@ -62,7 +62,6 @@ app.use(function (err, req, res, next) {
 
 // Faker data generator:
 // generate some fake users.
-<<<<<<< HEAD
 generateUserData = function (users) {
     var fakeName,
         finance,
