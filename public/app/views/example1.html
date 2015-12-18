@@ -1,6 +1,6 @@
 <div class="container alert alert-info" ng-controller="BaseController as base">Parent Div
-    <span>{{base.sayName()}}</span>
+    <span>{{base.sayName()}}</span> <input type="text" ng-model="base.name"/>
     <div class="alert alert-warning" ng-controller="ChildController as child">Child Div
-        <span>{{child.sayName()}}</span>
+        <span>{{child.sayName()}}</span><input type="text" ng-model="child.name"/>
     </div>
 </div>
